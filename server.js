@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('src'));
 app.listen(3000,  () => console.log("Example app listening on port 3000!"));
 app.get('/', (req, res) => res.sendFile(__dirname+"/src/index.html"));
-
+////////////
 
 //internal images only - we will need to develop a way to dynamically put images onto the app (S3 integration with frontend)
 app.get('/stanton', function(req,res){
