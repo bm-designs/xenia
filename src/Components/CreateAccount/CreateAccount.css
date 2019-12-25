@@ -1,0 +1,9 @@
+#create-account-container {
+	background-color:grey;
+	-webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 2s;
+}
+@-webkit-keyframes fadeIn{
+	from {opacity: 0;}
+	to {opacity: 1}
+}

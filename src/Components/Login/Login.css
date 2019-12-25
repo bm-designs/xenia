@@ -1,0 +1,43 @@
+#login-container {
+	width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    background: #2b2b2b;
+    padding: 1%;
+    border-radius: 10px;
+    -webkit-animation-name: fadeIn;
+	-webkit-animation-duration: 2s;
+}
+@-webkit-keyframes fadeIn{
+	from {opacity: 0;}
+	to {opacity: 1}
+}
+#login-container input {
+	width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    font-weight: 200;
+    padding: 1%;
+
+}
+#login-container button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+#login-container h1 {
+	text-align: center;
+}
+#back-button {
+	position: fixed;
+	left: 5%;
+	top:5%;
+	padding:1%;
+	border:solid gold 1px;
+	width: 70px;
+	border-radius: 50px;
+}
