@@ -80,3 +80,11 @@
 	margin-left: 2%;
 	border-left: solid grey 1px;
 }
+#login-hidden-layer {
+	position: fixed;
+	left: 25vw;
+	width: 50vw;
+	top: 3vh;
+	background: none;
+	visibility: visible;
+}

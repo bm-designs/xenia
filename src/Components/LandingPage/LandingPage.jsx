@@ -14,7 +14,13 @@ class LandingPage extends React.Component {
 	}
 	login(e){
 		e.preventDefault()
-		this.ReactDOM.render(<Login/>,document.getElementById('app'))
+		if(document.getElementById('login-hidden-layer').style.visibility == 'visible'){
+			this.ReactDOM.render(<Login/>,document.getElementById('login-hidden-layer'))
+		} else {
+			document.getElementById('login-hidden-layer').style.visibility = 'visible'
+		}
+
+		
 	}
 	createAccount(e){
 		e.preventDefault()
@@ -62,7 +68,7 @@ class LandingPage extends React.Component {
 							</div>
 						</div>
 					</div>
-					<div id='slide-two'>
+					<div id='login-hidden-layer'>
 						
 					</div>
 					<div id='slide-three'>

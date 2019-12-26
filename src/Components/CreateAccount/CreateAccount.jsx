@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
+import Questionaire from './Questionaire.jsx';
 import "./CreateAccount.css"
 class CreateAccount extends React.Component {
 	constructor(props){
@@ -8,18 +9,19 @@ class CreateAccount extends React.Component {
 
 	}
 	this.ReactDOM = ReactDOM;
-	this.nextCard = this.nextCard.bind(this)
+	this.start = this.start.bind(this)
 	}
-	nextCard(e){
+	start(e){
 		var card = e.target.val
 		console.log(card)
+		this.ReactDOM.render(<Questionaire/>, document.getElementById('create-account-wrapper'))
 	}
 	componentDidMount(){
 		
 	}
 	render(){
 		return(
-			<div class='create-account-wrapper'>
+			<div id='create-account-wrapper'>
 				<div id='create-account-container'>
 					<h1>First Name</h1>
 					<input type='text' name='firstName'/>
@@ -32,8 +34,9 @@ class CreateAccount extends React.Component {
 					<h1> Re-Enter Password </h1>
 					<input type='password' name='password'/>
 					<br/>
-					<button value='basic' onClick={this.nextCard.bind(this)}> Start Questionaire </button>
+					<button value='basic' onClick={this.start.bind(this)}> Start Questionaire </button>
 				</div>
+				
 			</div>
 			)
 	}

@@ -1,13 +1,21 @@
 #login-container {
-	width: 30%;
+	width: 65%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15%;
-    background: #2b2b2b;
+    margin-top: 40%;
+    background: black;
+    border: solid 1px gold;
     padding: 1%;
     border-radius: 10px;
     -webkit-animation-name: fadeIn;
 	-webkit-animation-duration: 2s;
+}
+#close {
+    float: left;
+    position: fixed;
+    padding: 0.5rem;
+    top: 31.5%;
+
 }
 @-webkit-keyframes fadeIn{
 	from {opacity: 0;}

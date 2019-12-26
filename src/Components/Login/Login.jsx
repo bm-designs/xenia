@@ -8,6 +8,10 @@ class Login extends React.Component {
 
 	}
 	this.ReactDOM = ReactDOM;
+	this.close = this.close.bind(this)
+	}
+	close(){
+		document.getElementById('login-hidden-layer').style.visibility = 'hidden';
 	}
 	componentDidMount(){
 		
@@ -15,8 +19,8 @@ class Login extends React.Component {
 	render(){
 		return(
 			<div class='login-wrapper'>
-				<a id='back-button' href='/'>←</a>
 				<div id='login-container'>
+					<button id='close' onClick={this.close}> X </button>
 					<h1>Username or Email </h1>
 					<input type='text' name='user'/>
 					<h1>Password</h1>
