@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
+import CreateAccount from '../CreateAccount/CreateAccount.jsx';
 import "./Login.css"
 class Login extends React.Component {
 	constructor(props){
@@ -9,9 +10,13 @@ class Login extends React.Component {
 	}
 	this.ReactDOM = ReactDOM;
 	this.close = this.close.bind(this)
+	this.login = this.login.bind(this)
 	}
 	close(){
 		document.getElementById('login-hidden-layer').style.visibility = 'hidden';
+	}
+	login(){
+		this.ReactDOM.render(<CreateAccount/>,document.getElementById('app'))
 	}
 	componentDidMount(){
 		
@@ -21,12 +26,20 @@ class Login extends React.Component {
 			<div class='login-wrapper'>
 				<div id='login-container'>
 					<button id='close' onClick={this.close}> X </button>
+					<div id='facebook-login'>
+						<a href='https//www.facebook.com/login'> Login with Facebook </a>
+					</div>
+						<p id='or'> or </p>
 					<h1>Username or Email </h1>
 					<input type='text' name='user'/>
 					<h1>Password</h1>
 					<input type='Password' name='password'/>
 					<br/>
 					<button onClick={this.login}>Login</button>
+					<a id='forgot' href=''> Forgot your password </a>
+					<div id='signup-option'>
+						<button  onClick={this.login}> Create an account > </button>
+					</div>
 				</div>
 			</div>
 			)

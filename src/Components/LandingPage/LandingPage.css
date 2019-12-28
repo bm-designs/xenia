@@ -1,20 +1,12 @@
 #carousel-wrapper {
 	-webkit-animation-name: fadeIn;
-	-webkit-animation-duration: 3s;
+	-webkit-animation-duration: 2s;
 }
 @-webkit-keyframes fadeIn{
 	from {opacity: 0;}
 	to {opacity: 1}
 }
-#landing-buttons {
-	width: 12%;
-	margin-right:auto;
-	margin-left:auto; 
-	display: block;
-}
-#landing-buttons a {
-	margin:1%;
-}
+
 #opaque-layer {
 	opacity: 0.8;
 	background-color: black;
@@ -44,14 +36,18 @@
 	font-weight: 600;
 }
 #slide-one a {
-	padding: 2%;
-    background: grey;
+	   padding: 1%;
+    text-align: center;
+    width: 400px;
+    background: #3d9ac6;
     border-radius: 5px;
     margin-top: 3%;
-    border: solid 1px gold;
     font-size: 40px;
     font-weight: 100;
     text-decoration: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 #slide-one a : hover {
 	background:white;
@@ -84,7 +80,7 @@
 	position: fixed;
 	left: 25vw;
 	width: 50vw;
-	top: 3vh;
+	top: 36vh;
 	background: none;
 	visibility: visible;
 }

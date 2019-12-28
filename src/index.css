@@ -9,14 +9,15 @@ a {
 }
 button {
 	cursor:pointer;
-	padding: 2%;
-    background: grey;
+	padding: 1%;
+    background: #3d9ac6;
     border-radius: 5px;
     margin-top: 3%;
-    border: solid 1px gold;
-    font-size: 40px;
+    width: 400px;
+    font-size: 30px;
     font-weight: 100;
     text-decoration: none;
+    border: none;
 }
 input {
 	border-radius: 5px;

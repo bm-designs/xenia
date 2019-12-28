@@ -11,10 +11,12 @@ class LandingPage extends React.Component {
 		this.handleScroll = this.handleScroll.bind(this)
 		this.login = this.login.bind(this)
 		this.createAccount = this.createAccount.bind(this)
+		this.hide = true;
 	}
 	login(e){
-		e.preventDefault()
-		if(document.getElementById('login-hidden-layer').style.visibility == 'visible'){
+		console.log()
+		if(this.hide==true){
+			this.hide = false
 			this.ReactDOM.render(<Login/>,document.getElementById('login-hidden-layer'))
 		} else {
 			document.getElementById('login-hidden-layer').style.visibility = 'visible'
@@ -48,7 +50,6 @@ class LandingPage extends React.Component {
 							<p> Your exhausting and timely search ends today.</p>
 							<div id='landing-buttons'>
 								<a onClick={this.login.bind(this)}>Login</a>
-								<a onClick={this.createAccount.bind(this)}>Signup</a>
 							</div>
 							<div id='info-wrapper'>
 								<div id='info'>

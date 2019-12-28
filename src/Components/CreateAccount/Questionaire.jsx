@@ -83,6 +83,7 @@ class Questionaire extends React.Component {
 					<h1> My roommates abslutely must....</h1>
 					<input type='text' name='musts'/>
 				</div>
+				<img src='/house' id='questionaire-create'/>
 			</div>
 			)
 	}
