@@ -87,7 +87,7 @@ class Questionaire extends React.Component {
 						<option> Rodent </option>
 					</select>
 					<br/>
-					<input id='clean' min='0' type='number' value='0'/>
+					<input id='clean' type='number'/>
 				</div>
 				<div id='card-5' class='questionaire-card' onMouseUp={this.nextCard}>
 					<h1>Do you snore ? </h1>
@@ -106,7 +106,7 @@ class Questionaire extends React.Component {
 				</div>
 				<div id='card-8' class='questionaire-card' onMouseUp={this.nextCard}>
 					<h1>Do you drink alcohol</h1>
-					<input type='radio' name='drink' value='yes'/> Yes
+					<input type='radio' name='drink' value='yes'/> Yes <br/>
 					<input type='radio' name='drink' value='no'/> No
 				</div>
 				<div id='card-9' class='questionaire-card' onMouseUp={this.nextCard}>

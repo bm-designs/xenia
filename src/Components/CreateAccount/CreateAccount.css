@@ -62,7 +62,7 @@
 	height: 20%;
 	background: #3d9ac6;
 	border:none;
-	color: grey;
+	color: white;
 	font-size: 5vh;
 }
 .questionaire-card select {
@@ -84,7 +84,7 @@
 	font-size:3vh;
 	resize: none;
 	font-weight: 100px;
-	padding: 15%;
+	padding: 1%;
 	border-radius:5px;
 	text-align: justify;
 }
@@ -165,15 +165,15 @@ input[type=range]::-ms-thumb {
   cursor: pointer;
 }
 #clean {
-	width: 48%;
-    height: 50%;
+	width: 15vw;
+    height: 15vw;
     background: transparent;
     color: white;
-    font-size: 30vh;
+    font-size: 25vh;
     text-align: center;
     border-radius: 50vw;
     border: solid 1px #3d9ac6;
-    margin-top: 15%;
+    margin-top: 10%;
 }
 #next-card {
 	position: fixed;
