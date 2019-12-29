@@ -10,11 +10,12 @@ class CreateAccount extends React.Component {
 	}
 	this.ReactDOM = ReactDOM;
 	this.start = this.start.bind(this)
+	this.user = {name:'', email:''}
 	}
 	start(e){
 		var card = e.target.val
 		console.log(card)
-		this.ReactDOM.render(<Questionaire/>, document.getElementById('create-account-wrapper'))
+		this.ReactDOM.render(<Questionaire user={this.user}/>, document.getElementById('create-account-wrapper'))
 	}
 	componentDidMount(){
 		

@@ -7,17 +7,36 @@ class Questionaire extends React.Component {
 
 	}
 	this.ReactDOM = ReactDOM;
+	this.user = props.user
+	this.nextCard = this.nextCard.bind(this)
+	this.update = this.update.bind(this)
+
+	}
+	nextCard(e){
+		console.log(e)
+		
+	}
+	update(e){
+		var update = e.target.value
+		var toUpdate = e.target.name
+		if(toUpdate=='first-preference'){
+			document.getElementById('clean').value = update
+			this.user['toUpdate']=update
+			console.log(this.user)
+		}
 	}
 	componentDidMount(){
 		
 	}
 	render(){
 		return(
-			<div id='questionaire-container'>
+			<div id='questionaire-wrapper'>
 				<img id='questionaire-logo' src='transparent'/>
-				<div id='card-1' class='questionaire-card'>
+				<div id='questionaire-container'>
+				<div id='first-card' class='questionaire-card' onMouseUp={this.nextCard.bind(this)}>
 					<h1> How clean do you keep your living space? </h1>
-					<input type='range' min='1' max='5'/> 
+					<input name='first-preference' type='range' min='1' max='5' onInput={this.update.bind(this)} required/>
+					<input id='clean' disabled/>
 				</div>
 				<div id='card-2' class='questionaire-card'>
 					<h1> Do you smoke? </h1>
@@ -43,18 +62,19 @@ class Questionaire extends React.Component {
 						<option>Fish</option>
 						<option> Rodent </option>
 					</select>
+					<br/>
 					<input type='number'/>
 				</div>
 				<div id='card-5' class='questionaire-card'>
 					<h1>Do you snore ? </h1>
-					<input type='radio' name='snore' value='no'/>
-					<input type='radio' name='snore' value='yes'/>
+					<input type='radio' name='snore' value='no'/> No
+					<input type='radio' name='snore' value='yes'/> Yes
 				</div>
 				<div id='card-6' class='questionaire-card'>
 					<h1> Are you okay with social gatherings at your house? </h1>
-					<input type='radio' name='gatherings' value='Occasionally (Breaks/Weekends)'/>
-					<input type='radio' name='gatherings' value='No'/>
-					<input type='radio' name='gatherings' value='Yes'/>
+					<input type='radio' name='gatherings' value='Occasionally (Breaks/Weekends)'/>Occasionally
+					<input type='radio' name='gatherings' value='No'/> No
+					<input type='radio' name='gatherings' value='Yes'/> Yes
 				</div>
 				<div id='card-7' class='questionaire-card'>
 					<h1>What time do you usually go to bed? </h1>
@@ -82,6 +102,7 @@ class Questionaire extends React.Component {
 				<div id='card-12' class='questionaire-card'>
 					<h1> My roommates abslutely must....</h1>
 					<input type='text' name='musts'/>
+				</div>
 				</div>
 				<img src='/house' id='questionaire-create'/>
 			</div>
