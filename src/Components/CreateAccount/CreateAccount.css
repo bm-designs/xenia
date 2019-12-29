@@ -19,26 +19,74 @@
 #create-account-container input {
 	width: 80%;
 }
-#first-card {
-	margin-left: 0%;
+#card-1 {
 }
 .questionaire-card {
 	background: black;
 	border-radius: 5px;
 	text-align: center;
+	font-size: 5vh;
+	font-weight: 100;
 	padding: 1%;
-	width: 20vw;
-	height: 500px;
-	margin-left: 10%;
+	width: 40vw;
+	height: 55vh;
 }
 #questionaire-container {
 	display: -webkit-box;;
-	overflow-x:hidden;
-	width: 22vw;
-	height: 510px;
+	overflow-x:scroll;
+	width: 40vw;
+	height: 58vh;
 	margin-left:auto;
 	margin-right: auto;
-	margin-top: 8%;
+	margin-top: 5%;
+
+}
+.questionaire-card input[type='radio'] {
+  -webkit-appearance: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #1e1d1d;
+  border: 2px solid #3d9ac6;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+  position: relative;
+  top: 4px;
+
+}
+.questionaire-card input[type='radio']:checked {
+	border: 6px solid gold;
+}
+.questionaire-card input[type='time']{
+	width: 50%;
+	height: 20%;
+	background: #3d9ac6;
+	border:none;
+	color: grey;
+	font-size: 5vh;
+}
+.questionaire-card select {
+	width: 50%;
+    height: 25%;
+    text-align: center;
+    font-size: 5vh;
+    font-weight: 100;
+    color:white;
+    border:none;
+    background: #3d9ac6;
+}
+.questionaire-card textarea {
+	width: 80%;
+	height: 35%;
+	border: none;
+	color: white;
+	background: #3d9ac6;
+	font-size:3vh;
+	resize: none;
+	font-weight: 100px;
+	padding: 15%;
+	border-radius:5px;
+	text-align: justify;
 }
 #questionaire-logo{
 	display: block;
@@ -117,11 +165,32 @@ input[type=range]::-ms-thumb {
   cursor: pointer;
 }
 #clean {
-	width: 80%;
-	height: 20%;
-	background: transparent;
+	width: 48%;
+    height: 50%;
+    background: transparent;
+    color: white;
+    font-size: 30vh;
+    text-align: center;
+    border-radius: 50vw;
+    border: solid 1px #3d9ac6;
+    margin-top: 15%;
+}
+#next-card {
+	position: fixed;
+	right: 15%;
+	top: 40%;
+	font-size: 10vh;
 	color: white;
-	font-size: 75px;
-	text-align: center;
-	margin-top: 5%;
+	background: none;
+	border: none;
+
+}
+#previous-card {
+	position: fixed;
+	left: 15%;
+	top: 45%;
+	font-size: 10vh;
+	color: white;
+	background: none;
+	border: none;
 }
