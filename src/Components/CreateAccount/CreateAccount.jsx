@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
-import Questionaire from './Questionaire.jsx';
+import HousingPreferences from './HousingPreferences.jsx';
 import "./CreateAccount.css"
 class CreateAccount extends React.Component {
 	constructor(props){
@@ -15,7 +15,7 @@ class CreateAccount extends React.Component {
 	start(e){
 		var card = e.target.val
 		console.log(card)
-		this.ReactDOM.render(<Questionaire user={this.user}/>, document.getElementById('create-account-wrapper'))
+		this.ReactDOM.render(<HousingPreferences user={this.user}/>, document.getElementById('create-account-wrapper'))
 	}
 	componentDidMount(){
 		

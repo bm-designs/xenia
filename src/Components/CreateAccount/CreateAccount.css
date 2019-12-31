@@ -1,3 +1,56 @@
+#preferences-wrapper {
+	display: inline-flex;
+	width: 100vw;
+}
+#preferences-container {
+	text-align: center;
+	padding: 1%;
+	width: 40%;
+	background: black;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+#preferences-container h1 {
+	display: inline-flex;
+}
+#preferences-container select {
+	height: 4vh;
+	width: 20%;
+	font-size: 40px;
+	padding-left: 1%;
+	margin: 1% 1%;
+}
+#preferences-container input[type=number]{
+	width: 3vw;
+    height: 3vw;
+    background: transparent;
+    color: white;
+    font-size: 4vh;
+    text-align: center;
+    border-radius: 50vw;
+    border: solid 1px #3d9ac6;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding-left: 1%;
+}
+#preferences-container input[type=text]{
+	width: 20%;
+    font-size: 40px;
+    height: 4vh;
+    background: #3c9ac6;
+    color: white;
+    margin: 1% 1%;
+}
+#amenities {
+	width: 100%;
+	border-top: solid white 1px;
+	font-size: 20px;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+
+}
 #create-account-container {
 	background-color: black;
     -webkit-animation-name: fadeIn;
@@ -38,10 +91,9 @@
 	height: 58vh;
 	margin-left:auto;
 	margin-right: auto;
-	margin-top: 5%;
 
 }
-.questionaire-card input[type='radio'] {
+input[type='radio'] {
   -webkit-appearance: none;
   border-radius: 50%;
   width: 40px;
@@ -54,7 +106,7 @@
   top: 4px;
 
 }
-.questionaire-card input[type='radio']:checked {
+input[type='radio']:checked {
 	border: 6px solid gold;
 }
 .questionaire-card input[type='time']{
@@ -65,7 +117,7 @@
 	color: white;
 	font-size: 5vh;
 }
-.questionaire-card select {
+ select {
 	width: 50%;
     height: 25%;
     text-align: center;
@@ -163,6 +215,9 @@ input[type=range]::-ms-thumb {
   border-radius: 3px;
   background: #ffffff;
   cursor: pointer;
+}
+#budget {
+	font-size: 50px;
 }
 #clean {
 	width: 15vw;
