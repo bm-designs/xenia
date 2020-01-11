@@ -2,7 +2,7 @@
 	display: inline-flex;
 	width: 100vw;
     height: 6vh;
-    background: grey;
+    background: #2e2e2e;
 }
 #header-container img {
 	height: 3vw;

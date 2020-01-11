@@ -10,9 +10,9 @@
 	width: 30vw;
 	height: 95vh;
 	border-right: solid 1px white;
-    border-top: solid 1px white;
 	padding:2%;
 	border-radius: 5px;
+	text-align: right;
 }
 #filter-container select {
 	margin-top: 2%;
