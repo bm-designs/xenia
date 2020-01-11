@@ -1,0 +1,22 @@
+#header-container {
+	display: inline-flex;
+	width: 100vw;
+    height: 6vh;
+    background: grey;
+}
+#header-container img {
+	height: 3vw;
+	width: 5vw;
+}
+#header-buttons button {
+	color: white;
+    background: none;
+    width: 4vw;
+    height: 3vw;
+    font-size: 70px;
+    margin-top: 2%;
+}
+#header-buttons {
+	display: inline-flex;
+	margin-left: auto;
+}

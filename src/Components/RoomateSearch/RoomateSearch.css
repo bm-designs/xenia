@@ -1,0 +1,53 @@
+#roommate-pic {
+	width: 35vw;
+	border-radius:500%;
+	height: 35vw;
+}
+#search-container {
+	display: inline-flex;
+}
+#filter-container {
+	width: 30vw;
+	height: 95vh;
+	border-right: solid 1px white;
+    border-top: solid 1px white;
+	padding:2%;
+	border-radius: 5px;
+}
+#filter-container select {
+	margin-top: 2%;
+	margin-bottom: 2%;
+	height: 2vw;
+	font-size: 25px;
+	padding: 1%;
+}
+#filter-container label {
+	font-size: 25px;
+}
+#results{
+	width: 65vw;
+	height: 90%;
+	float: right;
+
+}
+#filter-button {
+	width: 3vw;
+	height: 3vw;
+}
+#previous-roommate {
+	margin-left:3%;
+}
+#next-roommate {
+	float:right;
+}
+#roommate-container {
+	text-align: center;
+}
+#search-filter-button {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#roommate-box {
+	margin-top: 3%;
+}
