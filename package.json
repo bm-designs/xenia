@@ -19,6 +19,7 @@
     "babel-loader": "^8.0.6",
     "body-parser": "^1.19.0",
     "css-loader": "^3.4.0",
+    "flask": "^0.2.10",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "pg": "^7.15.1",
@@ -32,7 +33,9 @@
   "dependencies": {
     "nodemon": "^2.0.2",
     "react-scroll-slider": "^1.0.1",
+    "request": "^2.88.0",
     "server.js": "^1.0.0",
-    "styled-components": "^4.4.1"
+    "styled-components": "^4.4.1",
+    "xhr": "^2.5.0"
   }
 }

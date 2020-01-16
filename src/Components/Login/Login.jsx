@@ -19,7 +19,22 @@ class Login extends React.Component {
 		this.ReactDOM.render(<CreateAccount/>,document.getElementById('app'))
 	}
 	componentDidMount(){
-		
+		// fetch("http://127.0.0.1:5000/test",{
+		// 	method:'GET',
+		// 	mode: 'no-cors',
+		// 	headers: {
+		// 		'Accept': 'application/json, application/xml, text/plain, text/html, *.*',
+		// 		'Content-Type': 'application/json; application/x-www-form-urlencoded; charset=utf-8'
+		// 	}
+		// })
+		// .then(response=>{
+		// 	console.log(response)
+		// 	return response.json()
+		// })
+		// .then(json=>{
+		// 	console.log(json)
+		// })
+	
 	}
 	render(){
 		return(

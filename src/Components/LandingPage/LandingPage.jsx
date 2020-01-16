@@ -21,7 +21,6 @@ class LandingPage extends React.Component {
 		} else {
 			document.getElementById('login-hidden-layer').style.visibility = 'visible'
 		}
-
 		
 	}
 	createAccount(e){
