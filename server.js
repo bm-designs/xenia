@@ -3,7 +3,7 @@ var React = require('react')
 var ReactDOM = require('react-dom');
 var bodyParser = require('body-parser')
 let  app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.static('src'));
 app.listen(3000,  () => console.log("Example app listening on port 3000!"));
 app.get('/', (req, res) => res.sendFile(__dirname+"/src/index.html"));

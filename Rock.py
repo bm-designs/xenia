@@ -38,8 +38,9 @@ class xenia_user_info(db.Model):
 
 @app.route('/user_init', methods=["POST"])
 def user_init():
-    print(request)
-    request_json_blob = request.get_json()
+    request_json_blob = request.get_json(force=True)
+    print(request_json_blob)
+    print('hello')
     username = request_json_blob['username']
     password = request_json_blob['password']
     email = request_json_blob["email"]

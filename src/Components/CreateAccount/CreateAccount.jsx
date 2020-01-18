@@ -23,8 +23,8 @@ class CreateAccount extends React.Component {
 			method:'POST',
 			mode: 'no-cors',
 			headers: {
-				'Accept': 'application/json',
-				'Content-Type': 'application/json;'
+				'Accept': 'application/json, text/plain',
+				'Content-Type': 'application/json'
 			},
 			body: body
 		})
@@ -35,18 +35,18 @@ class CreateAccount extends React.Component {
 		.then(json=>{
 			console.log(json)
 		})
-		var username this.user['firstName']+" "+this.user['lastName']
-		this.xhr = new XMLHttpRequest()
-        this.xhr.open('POST', 'http://localhost:5000/login', true);
-        this.xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        this.xhr.send(JSON.stringify({'username': username, 'password': this.user['password']}));
-        this.xhr.onload = () => {
-            console.log('hit')
-            this.setState({response: xhr.responseText, done: true})
-            if (request.status >= 200 && request.status < 400) {
-                this.setState({response: xhr.responseText, done: true})
-            } 
-        };
+		// var username this.user['firstName']+" "+this.user['lastName']
+		// this.xhr = new XMLHttpRequest()
+  //       this.xhr.open('POST', 'http://localhost:5000/login', true);
+  //       this.xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+  //       this.xhr.send(JSON.stringify({'username': username, 'password': this.user['password']}));
+  //       this.xhr.onload = () => {
+  //           console.log('hit')
+  //           this.setState({response: xhr.responseText, done: true})
+  //           if (request.status >= 200 && request.status < 400) {
+  //               this.setState({response: xhr.responseText, done: true})
+  //           } 
+  //       };
 		this.ReactDOM.render(<HousingPreferences user={this.user}/>, document.getElementById('create-account-wrapper'))
 	}
 	update(e){
