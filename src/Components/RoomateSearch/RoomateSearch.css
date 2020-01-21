@@ -1,7 +1,7 @@
 #roommate-pic {
-	width: 35vw;
+	width: 25vw;
 	border-radius:500%;
-	height: 35vw;
+	height: 25vw;
 }
 #search-container {
 	display: inline-flex;
@@ -50,4 +50,21 @@
 }
 #roommate-box {
 	margin-top: 3%;
+}
+#roommate-box h1  {
+	margin-top: 2%;
+	margin-bottom: 0;
+	font-weight: 400;
+}
+#roommate-box h2 {
+	display: inline-flex;
+	margin: 0;
+	padding: 1%;
+	font-weight: 200;
+
+}
+#roommate-box p {
+	width: 60%;
+	margin-right: auto;
+    margin-left: auto;
 }

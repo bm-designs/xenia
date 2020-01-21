@@ -249,3 +249,61 @@ input[type=range]::-ms-thumb {
 	background: none;
 	border: none;
 }
+#housingListing-container {
+	display: inline-flex;
+	width: 100%;
+}
+#housingListing-container select {
+	width: 5vw;
+	height: 3vh;
+	font-size: 30px;
+}
+#housingListing-container textarea {
+	width: 10vw;
+	height: 8vw;
+	resize: none;
+	font-weight: 200;
+	font-size: 30px;
+	border-radius: 5px;
+}
+#housingListing-container input {
+	margin:1%;
+	width: 10vw;
+    padding: 1%;
+    font-weight: 200;
+    font-size: 30px;
+}
+#housingListing-container label {
+	font-size:35px;
+}
+#housingListing-wrapper {
+	width: 50vw;
+	margin-top: 3%;
+	background: black;
+	border-radius: 5px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 1%;
+}
+#housingListing-images {
+	width: 99%;
+    background: #2e2e2e;
+    height: 60vh;
+    margin-left: 2%;
+    border-radius: 5px;
+    border:solid 1px #3d9ac6;
+}
+#housingListing-continue {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 10vw;
+}
+#housingListing-uploadpics {
+	-webkit-appearance: none;
+    border-radius: 5px;
+    position: sticky;
+    left: 50%;
+    background: #3d9ac6;
+    color: white;
+}

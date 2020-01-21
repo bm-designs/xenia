@@ -20,7 +20,7 @@ class RoomateSearch extends React.Component {
 
 	}
 	componentDidMount(){
-		var roommates = [{name:'Stanton',url:'/stanton'},{name:"Ricky", url:'/ricky'},{name:"Dan", url:'/dan'}]
+		var roommates = [{name:'Stanton', age:'21', location:'San Francisco' ,url:'/stanton', housing:true, bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.'},{name:"Ricky", age:'20', housing:false, location: 'Los Angeles', url:'/ricky', bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.'},{name:"Dan", url:'/dan'}]
 		this.ReactDOM.render(<SearchResults roommates={roommates}/>, document.getElementById('results'))
 
 	}

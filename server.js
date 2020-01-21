@@ -7,6 +7,11 @@ app.use(bodyParser.json());
 app.use(express.static('src'));
 app.listen(3000,  () => console.log("Example app listening on port 3000!"));
 app.get('/', (req, res) => res.sendFile(__dirname+"/src/index.html"));
+app.post('/login', function(req,res){
+	console.log(req.body)
+	res.sendStatus(200)
+	res.send(200)
+})
 ////////////
 
 //internal images only - we will need to develop a way to dynamically put images onto the app (S3 integration with frontend)

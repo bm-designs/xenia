@@ -18,14 +18,14 @@ class SearchResults extends React.Component {
 		if (this.currentRoommate<0){
 			this.currentRoommate=0
 		}
-		this.ReactDOM.render(<Roommate name={this.roommates[this.currentRoommate].name} url={this.roommates[this.currentRoommate].url}/>, document.getElementById('roommate-container'))
+		this.ReactDOM.render(<Roommate roommate={this.roommates[this.currentRoommate]}/>, document.getElementById('roommate-container'))
 	}
 	nextRoommate(){
 		this.currentRoommate+=1
 		if (this.currentRoommate>=this.roommates.length){
 			this.currentRoommate=this.roomates.length-1
 		}
-		this.ReactDOM.render(<Roommate name={this.roommates[this.currentRoommate].name} url={this.roommates[this.currentRoommate].url}/>, document.getElementById('roommate-container'))
+		this.ReactDOM.render(<Roommate roommate={this.roommates[this.currentRoommate]} />, document.getElementById('roommate-container'))
 	}
 	componentDidMount(){
 		
@@ -34,7 +34,7 @@ class SearchResults extends React.Component {
 		return(
 			<div>
 				<div id='roommate-container'>
-					<Roommate name={this.roommates[0].name} url={this.roommates[0].url}/>
+					<Roommate roommate={this.roommates[0]}/>
 				</div>
 				<button id='previous-roommate' onClick={this.previousRoommate}> ← </button>
 				<button id='next-roommate' onClick={this.nextRoommate}> → </button>

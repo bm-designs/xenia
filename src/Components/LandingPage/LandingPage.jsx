@@ -8,14 +8,13 @@ class LandingPage extends React.Component {
 	constructor(props){
 		super(props)
 		this.ReactDOM = ReactDOM
-		this.handleScroll = this.handleScroll.bind(this)
 		this.login = this.login.bind(this)
-		this.createAccount = this.createAccount.bind(this)
 		this.hide = true;
 	}
-	login(e){
-		console.log()
+	login(){
+		console.log('here')
 		if(this.hide==true){
+			console.log('here now')
 			this.hide = false
 			this.ReactDOM.render(<Login/>,document.getElementById('login-hidden-layer'))
 		} else {
@@ -23,20 +22,9 @@ class LandingPage extends React.Component {
 		}
 		
 	}
-	createAccount(e){
-		e.preventDefault()
-		this.ReactDOM.render(<CreateAccount/>,document.getElementById("app"))
-	}
-	handleScroll(){
-		//keep track of current state and when the state changes, rerender or update the component state
-		alert('hello')
-	}
-	componentDidMount() {
-  
-	}
 
 	componentWillUnmount() {
-    	document.getElementById('slide-one').removeEventListener('scroll', this.scroll);
+    	
 	}
 	render(){
 		return(
@@ -48,7 +36,7 @@ class LandingPage extends React.Component {
 							<h1>Making finding the roommate and apartment of your dreams easier than ever before</h1>
 							<p> Your exhausting and timely search ends today.</p>
 							<div id='landing-buttons'>
-								<a onClick={this.login.bind(this)}>Login</a>
+								<button onClick={this.login}>Login</button>
 							</div>
 							<div id='info-wrapper'>
 								<div id='info'>

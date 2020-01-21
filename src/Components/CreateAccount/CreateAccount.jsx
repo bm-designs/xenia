@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
 import HousingPreferences from './HousingPreferences.jsx';
-import xhr from 'xhr';
 // import request from 'request';
 import "./CreateAccount.css"
 class CreateAccount extends React.Component {

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
-import Questionaire from './Questionaire.jsx'
+import HousingListing from './HousingListing.jsx'
 class HousingPreferences extends React.Component {
 	constructor(props){
 		super(props)
@@ -9,7 +9,7 @@ class HousingPreferences extends React.Component {
 	}
 	this.ReactDOM = ReactDOM;
 	this.user = props.user
-	this.beginQuestionaire = this.beginQuestionaire.bind(this)
+	this.housingListing = this.housingListing.bind(this)
 	this.update = this.update.bind(this)
 	this.changeBudget = this.changeBudget.bind(this)
 	}
@@ -21,9 +21,9 @@ class HousingPreferences extends React.Component {
 		var target = e.target.name
 		//update in user object
 	}
-	beginQuestionaire(){
+	housingListing(){
 		//confirm all data in fields before rendering
-		this.ReactDOM.render(<Questionaire user={this.user}/>,document.getElementById('create-account-wrapper'))
+		this.ReactDOM.render(<HousingListing user={this.user}/>,document.getElementById('create-account-wrapper'))
 	}
 	componentDidMount(){
 		
@@ -70,7 +70,7 @@ class HousingPreferences extends React.Component {
 							<input type='radio' name='amenity-12' value='parking'/>Parking Included
 						</div>
 					</div>
-					<button onClick={this.beginQuestionaire}>Continue</button>
+					<button onClick={this.housingListing}>Continue</button>
 				</div>
 			</div>
 			)
