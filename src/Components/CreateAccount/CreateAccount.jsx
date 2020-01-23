@@ -67,7 +67,6 @@ class CreateAccount extends React.Component {
 	}
 	update(e){
 		var element = e.target.name
-		console.log(e.target.value)
 		this.user[element] = e.target.value
 	}
 	componentDidMount(){

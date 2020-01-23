@@ -10,7 +10,8 @@ class Login extends React.Component {
 
 		}
 	this.ReactDOM = ReactDOM;
-	this.credentials = {}
+	this.credentials = {email: '',
+						password: ''}
 	this.close = this.close.bind(this)
 	this.signin = this.signin.bind(this)
 	this.update = this.update.bind(this)
@@ -47,32 +48,44 @@ class Login extends React.Component {
 		this.ReactDOM.render(<CreateAccount />, document.getElementById('app'))
 	}
 	update(e){
-		var target = e.target.name
-		this.credentials[target]=e.target.value
+		var element = e.target.name
+		this.credentials[element] = e.target.value
 	}
 	signin(){
-		if(this.credentials.username.split("@")){
-			console.log(this.credentials.password.match(/[0-9]/))
-			if (this.validatePassword(this.credentials.password)){
-				var data = {'username':this.credentials.username, 'password':this.credentials.password}
-				console.log(data)
-				fetch("/login", {
-					method: "POST",
-					headers: {
-		                  'Accept': 'application/json, text/plain',
-		                  'Content-Type': 'application/json'
-		                  },
-					body: JSON.stringify(data)
-				}).then(response => {
-					if (response.ok) {
-						//update the cookie/session then transition to the home page
-						this.ReactDOM.render(<Home user={{name:"Dan Molina", userid:'12345abc', email:'dan@xenia.com'}}/>,document.getElementById('app'))
-					}
-				})
-			} 
-		} else {
-			alert("Enter valid email")
-		}
+		var request_payload = JSON.stringify(this.credentials);
+		fetch("http://127.0.0.1:5000/login", {
+			headers: { "Content-Type": "application/json; charset=utf-8" },
+  			method: 'POST',
+  			body: request_payload
+		})
+		.then(response => {
+			return response.json();
+		})
+		.then(my_json => {
+			console.log(my_json)
+		})
+		// if(this.credentials.username.split("@")){
+		// 	console.log(this.credentials.password.match(/[0-9]/))
+		// 	if (this.validatePassword(this.credentials.password)){
+		// 		var data = {'username':this.credentials.username, 'password':this.credentials.password}
+		// 		console.log(data)
+		// 		fetch("/login", {
+		// 			method: "POST",
+		// 			headers: {
+		//                   'Accept': 'application/json, text/plain',
+		//                   'Content-Type': 'application/json'
+		//                   },
+		// 			body: JSON.stringify(data)
+		// 		}).then(response => {
+		// 			if (response.ok) {
+		// 				//update the cookie/session then transition to the home page
+		// 				this.ReactDOM.render(<Home user={{name:"Dan Molina", userid:"12345abc", email:"dan@xenia.com"}}/>,document.getElementById('app'))
+		// 			}
+		// 		})
+		// 	} 
+		// } else {
+		// 	alert("Enter valid email")
+		// }
 
 		
 	}
@@ -104,7 +117,7 @@ class Login extends React.Component {
 					</div>
 						<p id='or'> or </p>
 					<h1>Email </h1>
-					<input type='text' name='username' onChange={this.update.bind(this)}/>
+					<input type='text' name='email' onChange={this.update.bind(this)}/>
 					<h1>Password</h1>
 					<input type='password' name='password' onChange={this.update.bind(this)}/>
 					<br/>
