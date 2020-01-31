@@ -1,0 +1,25 @@
+#otp-wrapper {
+	width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+#otp-wrapper label {
+	font-size: 5vh;
+}
+#otp-wrapper select {
+	width: 3vw;
+	display:block;
+	margin-left: auto;
+	margin-right: auto; 
+}
+#otp-container button {
+	display:block;
+	margin-left: auto;
+	margin-right: auto; 
+}
+#otp-container {
+	background: #2e2e2e;
+	padding: 2% 20%;
+	border-radius:5px;
+}

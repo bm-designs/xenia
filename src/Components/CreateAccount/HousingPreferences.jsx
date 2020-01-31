@@ -12,6 +12,7 @@ class HousingPreferences extends React.Component {
 	this.housingListing = this.housingListing.bind(this)
 	this.update = this.update.bind(this)
 	this.changeBudget = this.changeBudget.bind(this)
+	this.checkAmenity = this.checkAmenity.bind(this)
 	}
 	changeBudget(e){
 		var target = e.target.value
@@ -20,13 +21,28 @@ class HousingPreferences extends React.Component {
 	update(e){
 		var target = e.target.name
 		//update in user object
+
 	}
 	housingListing(){
 		//confirm all data in fields before rendering
 		this.ReactDOM.render(<HousingListing user={this.user}/>,document.getElementById('create-account-wrapper'))
 	}
+	checkAmenity(e){
+		var amenity = e.target.name
+		console.log(amenity)
+	}
 	componentDidMount(){
-		
+		var amenityListeners = document.querySelector('#amenities').children
+		for (var amenity in amenityListeners){
+			console.log(amenity)
+			if(amenity.match(/^[0-9]/)){
+				amenityListeners[amenity].addEventListener('mouseup', this.checkAmenity.bind(this))
+			}
+			else {
+				break
+			}
+		}
+		// .addEventListener('mouseup',this.checkAmenity.bind(this))
 	}
 	render(){
 		return(

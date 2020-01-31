@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
-import Home from '../Home/Home.jsx';
+import OTP from '../OTP/OTP.jsx';
 class Questionaire extends React.Component {
 	constructor(props){
 		super(props)
@@ -18,7 +18,7 @@ class Questionaire extends React.Component {
 	}
 	finish(){
 		//log out results of the questionaire
-		this.ReactDOM.render(<Home user={this.user}/>, document.getElementById('app'))
+		this.ReactDOM.render(<OTP user={this.user}/>, document.getElementById('app'))
 
 	}
 	previousCard(){

@@ -78,7 +78,7 @@ class Login extends React.Component {
 		
 	}
 	oneTimePassword(){
-		
+
 	}
 	componentDidMount(){
 		// fetch("http://127.0.0.1:5000/test",{
@@ -113,7 +113,6 @@ class Login extends React.Component {
 					<input type='password' name='password' onChange={this.update.bind(this)}/>
 					<br/>
 					<button onClick={this.signin}>Login</button>
-					<button onClick={this.oneTimePassword}>One-Time Password</button>
 					<a id='forgot' href=''> Forgot your password </a>
 					<div id='signup-option'>
 						<button  onClick={this.create}> Create an account > </button>
