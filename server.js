@@ -54,3 +54,18 @@ app.get('/seventyfive', function(req,res){
 app.get('/video',function(req,res){
 	res.sendFile(__dirname+'/static/svg/video-icon.svg')
 })
+app.get('/check', function(res,res){
+	res.sendFile(__dirname + '/static/svg/check.svg')
+})
+app.get('/cancel', function(req,res){
+	res.sendFile(__dirname + '/static/svg/cancel.svg')
+})
+app.get('/user', function(req,res){
+	res.sendFile(__dirname + '/static/svg/user.svg')
+})
+app.get('/casa', function(req,res){
+	res.sendFile(__dirname + '/static/svg/home.svg')
+})
+app.get('/listing0',function(req,res){
+	res.sendFile(__dirname+'/static/img/listing0.png')
+})

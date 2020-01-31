@@ -82,7 +82,7 @@
 	font-weight: 100;
 	padding: 1%;
 	width: 40vw;
-	height: 55vh;
+	height: fit-content;
 }
 #questionaire-container {
 	display: -webkit-box;;
@@ -275,9 +275,10 @@ input[type=range]::-ms-thumb {
 }
 #housingListing-container label {
 	font-size:35px;
+	margin:1%; 
 }
 #housingListing-wrapper {
-	width: 50vw;
+	width: 46vw;
 	margin-top: 3%;
 	background: black;
 	border-radius: 5px;
@@ -286,9 +287,9 @@ input[type=range]::-ms-thumb {
 	padding: 1%;
 }
 #housingListing-images {
-	width: 99%;
     background: #2e2e2e;
-    height: 60vh;
+    padding: 2%;
+    height: 100%;
     margin-left: 2%;
     border-radius: 5px;
     border:solid 1px #3d9ac6;
@@ -300,10 +301,88 @@ input[type=range]::-ms-thumb {
 	width: 10vw;
 }
 #housingListing-uploadpics {
+	opacity: 0;
+	z-index: -1;
 	-webkit-appearance: none;
     border-radius: 5px;
     position: sticky;
     left: 50%;
     background: #3d9ac6;
     color: white;
+    position: absolute;
+}
+#housingListing-uploadpics0 {
+	opacity: 0;
+	z-index: -1;
+	-webkit-appearance: none;
+    border-radius: 5px;
+    position: sticky;
+    left: 50%;
+    background: #3d9ac6;
+    color: white;
+    position: absolute;
+}
+#housingListing-uploadpics1 {
+	opacity: 0;
+	z-index: -1;
+	-webkit-appearance: none;
+    border-radius: 5px;
+    position: sticky;
+    left: 50%;
+    background: #3d9ac6;
+    color: white;
+    position: absolute;
+}
+#housingListing-uploadpics2 {
+	opacity: 0;
+	z-index: -1;
+	-webkit-appearance: none;
+    border-radius: 5px;
+    position: sticky;
+    left: 50%;
+    background: #3d9ac6;
+    color: white;
+    position: absolute;
+}
+#gallery-pic-bg {
+	background: black;
+    width: 15vw;
+    margin: 0%;
+    height: 14vw;
+    border-radius: 5px;
+    padding-top: 30%;
+}
+#gallery-pic-add {
+	text-align: center;
+    width: 5vw;
+    height: 5vw;
+    font-size: 65px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2.6%;
+}
+#gallery {
+	padding: 0;
+}
+#gallery-top {
+	display: inline-flex;
+	width: fit-content;
+	height: fit-content;
+	padding:0;
+}
+#gallery-bottom {
+	display: inline-flex;
+	background: none;
+	width: fit-content;
+	height: fit-content;
+	padding:0;
+}
+#upload-label{
+	cursor: pointer;
+}
+#inserted-pic {
+	width: 17vw;
+	height: 14vw;
+	margin:2%;
 }

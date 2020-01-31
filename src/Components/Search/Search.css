@@ -1,0 +1,9 @@
+#search-toggle {
+	background: #3c9ac6;
+	padding: 1%;
+	padding-left: 45%;
+}
+#search-toggle img {
+	width: 3vw;
+	cursor: pointer;
+}

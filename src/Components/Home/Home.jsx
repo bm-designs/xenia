@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
-import RoomateSearch from '../RoomateSearch/RoomateSearch.jsx';
+import Search from '../Search/Search.jsx';
 import Header from './Header.jsx'
 import "./Home.css"
 class Home extends React.Component {
@@ -9,6 +9,7 @@ class Home extends React.Component {
 		this.state = {
 
 		}
+		this.user = props.user
 	this.ReactDOM = ReactDOM;
 	}
 	componentDidMount(){
@@ -17,9 +18,9 @@ class Home extends React.Component {
 	render(){
 		return(
 			<div id='home-wrapper'>
-				<Header/>
+				<Header user={this.user}/>
 				<div id='home-container'>
-					<RoomateSearch/>
+					<Search/>
 				</div>
 			</div>
 			)

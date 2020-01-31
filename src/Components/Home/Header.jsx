@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
 import "./Header.css"
+import SearchPage from '../Search/Search.jsx'
 class Header extends React.Component {
 	constructor(props){
 		super(props)
@@ -8,6 +9,7 @@ class Header extends React.Component {
 
 	}
 	this.ReactDOM = ReactDOM;
+	this.user = props.user
 	this.settings = this.settings.bind(this)
 	this.messages = this.messages.bind(this)
 	this.search = this.search.bind(this)
@@ -19,7 +21,7 @@ class Header extends React.Component {
 
 	}
 	search(){
-
+		this.ReactDOM.render(<Search user={this.user}/>, document.getElementById('home-container'))
 	}
 	componentDidMount(){
 		

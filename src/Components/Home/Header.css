@@ -4,6 +4,9 @@
     height: 6vh;
     background: #2e2e2e;
 }
+#header-wrapper {
+	background: #2e2e2e;
+}
 #header-container img {
 	height: 3vw;
 	width: 5vw;

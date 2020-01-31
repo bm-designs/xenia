@@ -14,26 +14,47 @@ class CreateAccount extends React.Component {
 	this.start = this.start.bind(this)
 	this.user = {firstName:'',lastName:'', email:'', password:''}
 	this.update = this.update.bind(this)
+	this.validateUser = this.validateUser.bind(this)
+	}
+	validateUser(){
+		if(this.user['firstName']){
+
+		}
+		if(this.user['lastName']){
+			
+		}
+		if(this.user['email']){
+			
+		}
+		if(this.user['password']){
+			
+		}
+		if(this.user['firstName']){
+			
+		}
 	}
 	start(){	
-		var body = JSON.stringify({'username':this.user['firstName']+" "+this.user['lastName'],'email':this.user['email'], 'password':this.user['password']})
-		console.log(body)
-		fetch("http://127.0.0.1:5000/user_init",{
-			method:'POST',
-			mode: 'no-cors',
-			headers: {
-				'Accept': 'application/json, text/plain',
-				'Content-Type': 'application/json'
-			},
-			body: body
-		})
-		.then(response=>{
-			console.log(response)
-			return response.json()
-		})
-		.then(json=>{
-			console.log(json)
-		})
+		if (this.validateUser()){
+			var body = JSON.stringify({'username':this.user['firstName']+" "+this.user['lastName'],'email':this.user['email'], 'password':this.user['password']})
+			console.log(body)
+			fetch("http://127.0.0.1:5000/user_init",{
+				method:'POST',
+				mode: 'no-cors',
+				headers: {
+					'Accept': 'application/json, text/plain',
+					'Content-Type': 'application/json'
+				},
+				body: body
+			})
+			.then(response=>{
+				console.log(response)
+				return response.json()
+			})
+			.then(json=>{
+				console.log(json)
+			})
+		}
+		
 		// var username this.user['firstName']+" "+this.user['lastName']
 		// this.xhr = new XMLHttpRequest()
   //       this.xhr.open('POST', 'http://localhost:5000/login', true);

@@ -16,6 +16,7 @@ class Login extends React.Component {
 	this.update = this.update.bind(this)
 	this.create = this.create.bind(this)
 	this.validatePassword = this.validatePassword.bind(this)
+	this.oneTimePassword = this.oneTimePassword.bind(this)
 	}
 	validatePassword(password){
 		if(password.length>=8){
@@ -44,7 +45,7 @@ class Login extends React.Component {
 		document.getElementById('login-hidden-layer').style.visibility = 'hidden';
 	}
 	create(){
-		this.ReactDOM.render(<CreateAccount />, document.getElementById('app'))
+		this.ReactDOM.render(<CreateAccount/>, document.getElementById('app'))
 	}
 	update(e){
 		var target = e.target.name
@@ -74,6 +75,9 @@ class Login extends React.Component {
 			alert("Enter valid email")
 		}
 
+		
+	}
+	oneTimePassword(){
 		
 	}
 	componentDidMount(){
@@ -109,6 +113,7 @@ class Login extends React.Component {
 					<input type='password' name='password' onChange={this.update.bind(this)}/>
 					<br/>
 					<button onClick={this.signin}>Login</button>
+					<button onClick={this.oneTimePassword}>One-Time Password</button>
 					<a id='forgot' href=''> Forgot your password </a>
 					<div id='signup-option'>
 						<button  onClick={this.create}> Create an account > </button>
