@@ -7,8 +7,12 @@
 	margin-right:auto;
 	border-bottom-left-radius: 5%;
     border-bottom-right-radius: 5%;
+    z-index: 99;
 }
 #search-toggle img {
 	width: 3vw;
 	cursor: pointer;
+}
+#search-container {
+	margin-top:-2%;
 }

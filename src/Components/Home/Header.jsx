@@ -13,7 +13,7 @@ class Header extends React.Component {
 	this.user = props.user
 	this.show = true
 	this.settings = this.settings.bind(this)
-	this.messages = this.messages.bind(this)
+	this.home = this.home.bind(this)
 	this.search = this.search.bind(this)
 	}
 	settings(){
@@ -25,7 +25,7 @@ class Header extends React.Component {
 			this.show = true
 		}
 	}
-	messages(){
+	home(){
 
 	}
 	search(){
@@ -41,7 +41,7 @@ class Header extends React.Component {
 					<img src='/transparent' id='header-logo'/>
 					<div id='header-buttons'>
 						<button onClick={this.search}>🔍</button>
-						<button onClick={this.messages}>✉️</button>
+						<button onClick={this.home}>🏠</button>
 						<button onClick={this.settings}>⚙︎</button>
 					</div>
 					<div id='settings-menu-buffer'>

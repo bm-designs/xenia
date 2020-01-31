@@ -14,17 +14,27 @@
 }
 #housingsearch-filter{
 	font-size: 35px;
+	padding: 1%;
+    border: solid white 1px;
+    border-radius: 15px;
+    margin-right: 1%;
 }
 #housingsearch-filter select {
 	height: 7vh;
+}
+#housingsearch-filter button {
+	display: block;
+	margin-left:auto;
+	margin-right: auto;
 }
 #result-container {
 	display: inline-flex;
 	font-size: 30px;
 	font-weight: 300;
 	padding: 1%; 
-	border-bottom:solid 1px white;
+	border:solid 1px white;
 	width: 65vw;
+	border-radius: 15px;
 }
 #housingsearch-results-wrapper label {
 	font-size: 35px;
