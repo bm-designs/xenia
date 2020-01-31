@@ -1,7 +1,12 @@
 #search-toggle {
 	background: #3c9ac6;
 	padding: 1%;
-	padding-left: 45%;
+	width:8%;
+	display: block;
+	margin-left: auto;
+	margin-right:auto;
+	border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
 }
 #search-toggle img {
 	width: 3vw;

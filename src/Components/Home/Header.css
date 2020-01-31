@@ -23,3 +23,19 @@
 	display: inline-flex;
 	margin-left: auto;
 }
+#settings-menu-buffer {
+	width:0;
+	height: 0;
+	margin:0;
+	position: fixed;
+	right: 13%;
+	top:9%;
+	visibility: hidden;
+}
+#settings-menu {
+	widows: 5vw;
+}
+#settings-menu button {
+	border-radius: 0px;
+	padding: 1%;
+}

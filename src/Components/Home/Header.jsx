@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom";
+import SettingsMenu from './SettingsMenu.jsx'
 import "./Header.css"
 import SearchPage from '../Search/Search.jsx'
 class Header extends React.Component {
@@ -10,12 +11,19 @@ class Header extends React.Component {
 	}
 	this.ReactDOM = ReactDOM;
 	this.user = props.user
+	this.show = true
 	this.settings = this.settings.bind(this)
 	this.messages = this.messages.bind(this)
 	this.search = this.search.bind(this)
 	}
 	settings(){
-
+		if (this.show==true){
+			this.show = false
+			document.getElementById('settings-menu-buffer').style.visibility = 'visible'
+		} else {
+			document.getElementById('settings-menu-buffer').style.visibility = 'hidden'
+			this.show = true
+		}
 	}
 	messages(){
 
@@ -24,7 +32,7 @@ class Header extends React.Component {
 		this.ReactDOM.render(<Search user={this.user}/>, document.getElementById('home-container'))
 	}
 	componentDidMount(){
-		
+		this.ReactDOM.render(<SettingsMenu user={this.user}/>, document.getElementById('settings-menu-buffer'))
 	}
 	render(){
 		return(
@@ -35,6 +43,9 @@ class Header extends React.Component {
 						<button onClick={this.search}>🔍</button>
 						<button onClick={this.messages}>✉️</button>
 						<button onClick={this.settings}>⚙︎</button>
+					</div>
+					<div id='settings-menu-buffer'>
+						
 					</div>
 					
 				</div>
