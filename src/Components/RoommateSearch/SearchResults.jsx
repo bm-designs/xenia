@@ -26,7 +26,7 @@ class SearchResults extends React.Component {
 	nextRoommate(){
 		this.currentRoommate+=1
 		if (this.currentRoommate>this.roommates.length){
-			this.currentRoommate=this.roommates.length-1
+			this.currentRoommate=0
 		}
 		this.ReactDOM.render(<Roommate roommate={this.roommates[this.currentRoommate]} />, document.getElementById('roommate-container'))
 	}

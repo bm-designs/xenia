@@ -1,0 +1,39 @@
+#saved-roommates {
+	display: inline-flex;
+	overflow-x: scroll;
+	padding:1%;
+	text-align: center;
+	width: 99.5vw;
+	padding: 0% 3%;
+}
+.buffer {
+	border-right: solid white 0.5px;
+	padding: 1%;
+	cursor:pointer;
+}
+.tuffer {
+	margin-right: 3%;
+	cursor:pointer;
+}
+#roommate-pic {
+	width:15vw;
+	height: 15vw;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: solid 3px #3d9ac6;
+}
+#profile-heading {
+	padding: 1%;
+	color: #3d9ac6;
+	font-weight: 400;
+}
+#saved-roommates p {
+	width:30vw;
+}
+#saved-housing {
+	padding: 0% 3%;
+	display: inline-flex;
+	overflow-x: scroll;
+	width:99.5vw;
+}
