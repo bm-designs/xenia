@@ -28,11 +28,15 @@ class HousingPreferences extends React.Component {
 		this.ReactDOM.render(<HousingListing user={this.user}/>,document.getElementById('create-account-wrapper'))
 	}
 	checkAmenity(e){
-		var amenity = e.target.name
-		console.log(amenity)
+		// var amenity = document.getElementById(e.target.id)
+		if (e.target.checked == true){
+			console.log(e.target.className)
+			e.target.setAttribute('checked', false)
+		}
+		
 	}
 	componentDidMount(){
-		var amenityListeners = document.querySelector('#amenities').children
+		var amenityListeners = document.getElementsByClassName('amenityListener')
 		for (var amenity in amenityListeners){
 			console.log(amenity)
 			if(amenity.match(/^[0-9]/)){
@@ -71,20 +75,52 @@ class HousingPreferences extends React.Component {
 					<label id='budget'> 300$ </label> 
 					<div id='preferred-amenities'>
 						<h1> Preferred Amenities </h1>
-						<div id='amenities'>
-							<input type='radio' name='amenity-1' value='washer-dryer'/>In-Unit Washer Dryer
-							<input type='radio' name='amenity-2' value='hot-tub'/>Hot Tub
-							<input type='radio' name='amenity-3' value='wifi'/>Wifi Included
-							<input type='radio' name='amenity-4' value='month'/>Month to Month
-							<input type='radio' name='amenity-5' value='gym'/>Gym
-							<input type='radio' name='amenity-6' value='pets'/>Pets Allowed
-							<input type='radio' name='amenity-7' value='ac'/>Air Conditioning
-							<input type='radio' name='amenity-8' value='pool'/>Pool
-							<input type='radio' name='amenity-9' value='backyard'/>Backyard
-							<input type='radio' name='amenity-10' value='bathroom'/>Private Bathroom
-							<input type='radio' name='amenity-11' value='utilities'/>Utilities Included
-							<input type='radio' name='amenity-12' value='parking'/>Parking Included
-						</div>
+						<form id='amenities'>
+							<table>
+								<tbody>
+									<tr>
+										<td>
+											<input class='amenityListener' type='checkbox' id='amenity-1' value='washer-dryer'/>In-Unit Washer Dryer
+										</td>
+										<td>
+											<input class='amenityListener' type='checkbox' id='amenity-2' value='hot-tub'/>Hot Tub
+										</td>
+										<td>
+											<input class='amenityListener' type='checkbox' id='amenity-3' value='wifi'/>Wifi Included 
+										</td>
+										<td>
+											<input class='amenityListener' type='checkbox' id='amenity-4' value='month'/>Month to Month 
+										</td>
+										<td>
+											<input class='amenityListener' type='checkbox' id='amenity-5' value='gym'/>Gym 
+										</td>
+										<td>
+											<input class='amenityListener' type='checkbox' id='amenity-6' value='pets'/>Pets Allowed 
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input class='amenityListener' type='checkbox' id='amenity-7' value='ac'/>Air Conditioning
+										</td>
+										<td>
+											<input class='amenityListener' type='checkbox' id='amenity-8' value='pool'/>Swimming Pool
+										</td>
+										<td>
+											<input class='amenityListener' type='checkbox' id='amenity-9' value='backyard'/>Backyard
+										</td>
+										<td>
+											<input class='amenityListener' type='checkbox' id='amenity-10' value='bathroom'/>Private Bathroom
+										</td>
+										<td>
+											<input class='amenityListener' type='checkbox' id='amenity-11' value='utilities'/>Utilities Included
+										</td>
+										<td>
+											<input class='amenityListener' type='checkbox' id='amenity-12' value='parking'/>Parking Included
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</form>
 					</div>
 					<button onClick={this.housingListing}>Continue</button>
 				</div>

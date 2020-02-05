@@ -2,21 +2,21 @@
 	display: inline-flex;
 	width: 100vw;
     height: 6vh;
-    background: #2e2e2e;
+    background: black;
 }
 #header-wrapper {
-	background: #2e2e2e;
+	background: black;
 }
 #header-container img {
-	height: 3vw;
-	width: 5vw;
+	height: 4vw;
+	width: 8vw;
 }
 #header-buttons button {
 	color: white;
     background: none;
     width: 4vw;
     height: 3vw;
-    font-size: 70px;
+    font-size: 40px;
     margin-top: 2%;
 }
 #header-buttons {
@@ -38,4 +38,16 @@
 #settings-menu button {
 	border-radius: 0px;
 	padding: 1%;
+}
+#logout {
+	border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+#settings  {
+	border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }

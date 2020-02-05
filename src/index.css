@@ -1,7 +1,8 @@
 body {
 	color:#fff;
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
-	background-color: black;
+	font-family: Gill Sans, sans-serif;
+	background: radial-gradient(#2a3850, black);
+	font-size: 25px;
 }
 a {
 	width: 150px;

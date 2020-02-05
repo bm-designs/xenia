@@ -7,7 +7,6 @@
 	padding: 0% 3%;
 }
 .buffer {
-	border-right: solid white 0.5px;
 	padding: 1%;
 	cursor:pointer;
 }
@@ -16,17 +15,16 @@
 	cursor:pointer;
 }
 #roommate-pic {
-	width:15vw;
-	height: 15vw;
+	width:10vw;
+	height: 10vw;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	border: solid 3px #3d9ac6;
 }
 #profile-heading {
 	padding: 1%;
-	color: #3d9ac6;
-	font-weight: 400;
+	color: white;
+	font-weight: 600;
 }
 #saved-roommates p {
 	width:30vw;

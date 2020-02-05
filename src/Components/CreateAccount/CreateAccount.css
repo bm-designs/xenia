@@ -56,21 +56,24 @@
     -webkit-animation-name: fadeIn;
     -webkit-animation-duration: 2s;
     width: 800px;
-    height: 650px;
+    height: fit-content;
     margin-left: auto;
     margin-right: auto;
     padding: 2%;
     border-radius: 5px;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 5%;
    
 }
+
 @-webkit-keyframes fadeIn{
 	from {opacity: 0;}
 	to {opacity: 1}
 }
 #create-account-container input {
 	width: 80%;
+	height:5vh;
+	font-size: 25px;
 }
 #card-1 {
 }
@@ -93,6 +96,14 @@
 	margin-right: auto;
 
 }
+#questionaire-container input[type='text']{
+	height: 5vh;
+    width: 60%;
+    color: white;
+    background: #3d9ac6;
+    font-size: 25px;
+}
+
 input[type='radio'] {
   -webkit-appearance: none;
   border-radius: 50%;
@@ -107,6 +118,22 @@ input[type='radio'] {
 
 }
 input[type='radio']:checked {
+	border: 6px solid gold;
+}
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: #1e1d1d;
+  border: 2px solid #3d9ac6;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+  position: relative;
+  top: 4px;
+
+}
+input[type='checkbox']:checked {
 	border: 6px solid gold;
 }
 .questionaire-card input[type='time']{
@@ -157,6 +184,7 @@ input[type='radio']:checked {
     height: 100vh;
     background: radial-gradient(#2a3850, black);
     display: inline-block;
+    overflow:scroll;
     
 }
 input[type=range] {
@@ -220,11 +248,12 @@ input[type=range]::-ms-thumb {
 	font-size: 50px;
 }
 #clean {
-	width: 15vw;
-    height: 15vw;
+	width: 10vw;
+    height: 10vw;
     background: transparent;
     color: white;
-    font-size: 25vh;
+    font-size: 20vh;
+    font-weight: 200;
     text-align: center;
     border-radius: 50vw;
     border: solid 1px #3d9ac6;

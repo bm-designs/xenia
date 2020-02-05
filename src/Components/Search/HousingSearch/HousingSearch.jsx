@@ -9,8 +9,21 @@ class HousingSearch extends React.Component {
 
 	}
 	this.ReactDOM = ReactDOM;
+	this.searchQuery = {}
 	this.search = this.search.bind(this)
+	this.updateSearch = this.updateSearch.bind(this)
 	this.searchCity = this.searchCity.bind(this)
+	}
+
+	updateSearch(e){
+		var value = e.target.value
+		var key = e.target.name
+		if (key in this.searchQuery){
+			//remove from dictionary
+			this.searchQuery[key]=''
+		} else {
+			this.searchQuery[key]=value
+		}
 	}
 	search(){
 
@@ -47,18 +60,18 @@ class HousingSearch extends React.Component {
 						<input type='range' min='0' max='5000' name='budget'/><br/>
 						<label> Preferred Amenities: </label>
 						<div id='amenities'>
-							<input type='radio' name='amenity-1' value='washer-dryer'/>In-Unit Washer Dryer<br/>
-							<input type='radio' name='amenity-2' value='hot-tub'/>Hot Tub<br/>
-							<input type='radio' name='amenity-3' value='wifi'/>Wifi Included<br/>
-							<input type='radio' name='amenity-4' value='month'/>Month to Month<br/>
-							<input type='radio' name='amenity-5' value='gym'/>Gym<br/>
-							<input type='radio' name='amenity-6' value='pets'/>Pets Allowed<br/>
-							<input type='radio' name='amenity-7' value='ac'/>Air Conditioning<br/>
-							<input type='radio' name='amenity-8' value='pool'/>Pool<br/>
-							<input type='radio' name='amenity-9' value='backyard'/>Backyard<br/>
-							<input type='radio' name='amenity-10' value='bathroom'/>Private Bathroom<br/>
-							<input type='radio' name='amenity-11' value='utilities'/>Utilities Included<br/>
-							<input type='radio' name='amenity-12' value='parking'/>Parking Included<br/>
+							<input onInput={this.updateSearch.bind(this)} type='checkbox' name='amenity-1' value='washer-dryer'/>In-Unit Washer Dryer<br/>
+							<input onInput={this.updateSearch.bind(this)} type='checkbox' name='amenity-2' value='hot-tub'/>Hot Tub<br/>
+							<input onInput={this.updateSearch.bind(this)} type='checkbox' name='amenity-3' value='wifi'/>Wifi Included<br/>
+							<input onInput={this.updateSearch.bind(this)} type='checkbox' name='amenity-4' value='month'/>Month to Month<br/>
+							<input onInput={this.updateSearch.bind(this)} type='checkbox' name='amenity-5' value='gym'/>Gym<br/>
+							<input onInput={this.updateSearch.bind(this)} type='checkbox' name='amenity-6' value='pets'/>Pets Allowed<br/>
+							<input onInput={this.updateSearch.bind(this)} type='checkbox' name='amenity-7' value='ac'/>Air Conditioning<br/>
+							<input onInput={this.updateSearch.bind(this)} type='checkbox' name='amenity-8' value='pool'/>Pool<br/>
+							<input onInput={this.updateSearch.bind(this)} type='checkbox' name='amenity-9' value='backyard'/>Backyard<br/>
+							<input onInput={this.updateSearch.bind(this)} type='checkbox' name='amenity-10' value='bathroom'/>Private Bathroom<br/>
+							<input onInput={this.updateSearch.bind(this)} type='checkbox' name='amenity-11' value='utilities'/>Utilities Included<br/>
+							<input onInput={this.updateSearch.bind(this)} type='checkbox' name='amenity-12' value='parking'/>Parking Included<br/>
 						</div>
 						<button onClick={this.search}> Search </button>
 					</div>

@@ -17,18 +17,34 @@ class SearchResults extends React.Component {
 		this.ReactDOM = ReactDOM;
 	}
 	previousRoommate(){
-		this.currentRoommate-=1
-		if (this.currentRoommate<0){
-			this.currentRoommate=0
+		this.currentRoommate = this.currentRoommate - 1
+		console.log(this.currentRoommate)
+		if (this.currentRoommate>0){
+			console.log(this.roommates[this.currentRoommate])
+			this.ReactDOM.render(<Roommate roommate={this.roommates[this.currentRoommate - 1]}/>, document.getElementById('roommate-container'))
+			this.currentRoommate -=1
 		}
-		this.ReactDOM.render(<Roommate roommate={this.roommates[this.currentRoommate]}/>, document.getElementById('roommate-container'))
+		else {
+			this.currentRoommate=0
+			console.log(this.roommates[this.currentRoommate])
+			this.ReactDOM.render(<Roommate roommate={this.roommates[this.currentRoommate]} />, document.getElementById('roommate-container'))
+
+		}
+		
 	}
 	nextRoommate(){
 		this.currentRoommate+=1
-		if (this.currentRoommate>this.roommates.length){
+		console.log(this.currentRoommate)
+		if (this.currentRoommate>=this.roommates.length - 1){
 			this.currentRoommate=0
+			console.log(this.roommates[this.currentRoommate])
+			this.ReactDOM.render(<Roommate roommate={this.roommates[this.currentRoommate]} />, document.getElementById('roommate-container'))
+		} 
+		else {
+			console.log(this.roommates[this.currentRoommate])
+			this.ReactDOM.render(<Roommate roommate={this.roommates[this.currentRoommate]} />, document.getElementById('roommate-container'))
+
 		}
-		this.ReactDOM.render(<Roommate roommate={this.roommates[this.currentRoommate]} />, document.getElementById('roommate-container'))
 	}
 	saveRoommate(){
 		console.log(this.preferences)
@@ -59,14 +75,23 @@ class SearchResults extends React.Component {
 	}
 	render(){
 		return(
-			<div>
+			<div id='results-wrapper'>
+				<div id='remove-container'>
+					<button id='remove-roommate' onClick={this.removeRoommate}><img src='/cancel' /></button>
+				</div>
 				<div id='roommate-container'>
 					<Roommate roommate={this.roommates[0]}/>
 				</div>
-				<button id='previous-roommate' onClick={this.previousRoommate}> ← </button>
-				<button id='next-roommate' onClick={this.nextRoommate}> → </button>
-				<button id='save-roommate' onClick={this.saveRoommate}><img src='/check'/></button>
-				<button id='remove-roommate' onClick={this.removeRoommate}><img src='/cancel' /></button>
+				<div id='save-container'>
+					<button id='save-roommate' onClick={this.saveRoommate}><img src='/check'/></button>
+				</div>
+				<div style={{width:'20vw',display:'block',marginLeft:'auto',marginRight:'auto'}}>
+					<button id='previous-roommate' onClick={this.previousRoommate}> ← </button>
+					<button id='next-roommate' onClick={this.nextRoommate}> → </button>
+				</div>
+				
+				
+				
 			</div>
 			)
 	}

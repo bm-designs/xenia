@@ -24,8 +24,8 @@ class SettingsMenu extends React.Component {
 	render(){
 		return(
 			<div id='settings-menu'>
-				<button onClick={this.logout}>Logout</button>
-				<button onClick={this.profileSettings}>Settings</button>
+				<button id='logout' onClick={this.logout}>Logout</button>
+				<button id='settings' onClick={this.profileSettings}>Settings</button>
 			</div>
 			)
 	}

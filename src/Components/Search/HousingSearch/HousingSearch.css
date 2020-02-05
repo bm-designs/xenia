@@ -7,6 +7,9 @@
     margin-top: 1%;
 
 }
+#amenity-description p {
+	font-weight: 100
+}
 #housingsearch-container {
 	width: 100vw;
 	padding: 1%;
@@ -20,7 +23,17 @@
     margin-right: 1%;
 }
 #housingsearch-filter select {
-	height: 7vh;
+	height: 4vh;
+	font-size: 25px;
+}
+#housingsearch-filter label {
+	font-weight: 100;
+}
+#housingsearch-filter input[type=text]{
+	width:8vw;
+	font-size: 25px;
+	color: white;
+	background: #3d9ac6;
 }
 #housingsearch-filter button {
 	display: block;
@@ -32,10 +45,10 @@
 	font-size: 30px;
 	font-weight: 300;
 	padding: 1%; 
-	border:solid 1px white;
-	width: 65vw;
+	width: 50vw;
 	border-radius: 15px;
-	background: #2e2e2e;
+	background: black;
+	border: solid 3px #3d9ac6;
 }
 #housingsearch-results-wrapper label {
 	font-size: 35px;
@@ -44,7 +57,7 @@
 #result-container p {
 	margin: 0;
 	font-size: 30px;
-	font-weight: 200;
+	font-weight: 400;
 }
 #result-container img {
 	width: 20vw;

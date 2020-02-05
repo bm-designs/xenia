@@ -123,12 +123,16 @@ class Questionaire extends React.Component {
 					<textarea type='text' name='hobbies'></textarea>
 				</div>
 				<div id='card-11' class='questionaire-card'>
-					<h1> My roommates absolutely cannot....</h1>
+					<h1> Provide a short bio about yourself....</h1>
 					<textarea type='text' name='nonos'></textarea>
 				</div>
 				<div id='card-12' class='questionaire-card'>
-					<h1> My roommates abslutely must....</h1>
-					<textarea type='text' name='musts'></textarea>
+					<h1> Provide your most preferred method your roommate can contact you....</h1>
+					<input type='radio'name='contact' value='facebook'/> Facebook
+					<input type='radio'name='contact' value='mobile'/> Mobile
+					<input type='radio'name='contact' value='email'/> Email
+					<input type='radio'name='contact' value='other'/> Other <br/>
+					<input type='text' placeholder='Enter Contact Info'/> <br/>
 					<button onClick={this.finish}> Finish Questionaire </button>
 				</div>
 				</div>

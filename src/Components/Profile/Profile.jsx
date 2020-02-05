@@ -16,13 +16,12 @@ class Profile extends React.Component {
 	this.populate = this.populate.bind(this)
 	}
 	populate(roommates,housing){
-		console.log(roommates,housing)
 		for (var roommate in roommates){
 			var newRoommate = document.createElement('div')
 			newRoommate.id = 'roommate-buffer'+roommate
 			newRoommate.className = 'buffer'
 			document.getElementById('saved-roommates').appendChild(newRoommate)
-			this.ReactDOM.render(<Roommate roommate={roommates[roommate]}/>,document.getElementById('roommate-buffer'+roommate))
+			this.ReactDOM.render(<Roommate saved='true' roommate={roommates[roommate]}/>,document.getElementById('roommate-buffer'+roommate))
 		}
 		for (var house in housing) {
 			var newHousing = document.createElement('div')
@@ -39,7 +38,9 @@ class Profile extends React.Component {
 			location:'San Francisco' ,
 			url:'/stanton', 
 			housing:true, 
-			bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.'
+			bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.',
+				contact: 'Email',
+				contactInfo:'stantheman@bunkd.com'
 			},
 			{
 				name:"Ricky", 
@@ -47,7 +48,9 @@ class Profile extends React.Component {
 				housing:false, 
 				location: 'Los Angeles', 
 				url:'/ricky', 
-				bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.'
+				bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.',
+				contact: 'Mobile',
+				contactInfo:'(310)-555-0959'
 			},
 			{
 				name:"Dan", 
@@ -55,7 +58,9 @@ class Profile extends React.Component {
 				url:'/dan', 
 				housing:true, 
 				location: 'Mountain View', 
-				bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.'
+				bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.',
+				contact: 'Facebook',
+				contactInfo:'Dan Molina'
 			},
 			{
 				name:"Dan", 
@@ -63,7 +68,9 @@ class Profile extends React.Component {
 				url:'/dan', 
 				housing:true, 
 				location: 'Mountain View', 
-				bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.'
+				bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.',
+				contact: 'Facebook',
+				contactInfo:'Dan Molina'
 			},
 			{
 				name:"Dan", 
@@ -71,7 +78,9 @@ class Profile extends React.Component {
 				url:'/dan', 
 				housing:true, 
 				location: 'Mountain View', 
-				bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.'
+				bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.',
+				contact: 'Facebook',
+				contactInfo:'Dan Molina'
 			},
 			{
 				name:"Dan", 
@@ -79,7 +88,9 @@ class Profile extends React.Component {
 				url:'/dan', 
 				housing:true, 
 				location: 'Mountain View', 
-				bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.'
+				bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.',
+				contact: 'Facebook',
+				contactInfo:'Dan Molina'
 			},
 			{
 				name:"Dan", 
@@ -87,10 +98,21 @@ class Profile extends React.Component {
 				url:'/dan', 
 				housing:true, 
 				location: 'Mountain View', 
-				bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.'
-			}
+				bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.',
+				contact: 'Facebook',
+				contactInfo:'Dan Molina'
+			},
+			{
+				name:"Dan", 
+				age: '21',
+				url:'/dan', 
+				housing:true, 
+				location: 'Mountain View', 
+				bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.',
+				contact: 'Facebook',
+				contactInfo:'Dan Molina'
+			}]
 
-			]
 		var housing = [{
 			bedroom: "2 Bedroom",
 			bathroom: '1 Bathroom',
@@ -135,6 +157,7 @@ class Profile extends React.Component {
 					</div>
 					<div id='profile-info-container'>
 						<div id='profile-info'>
+							
 						</div>
 					</div>
 				</div>

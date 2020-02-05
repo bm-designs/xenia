@@ -1,0 +1,6 @@
+#home-wrapper {
+	background: radial-gradient(#2a3850, black);
+	height: 100vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}

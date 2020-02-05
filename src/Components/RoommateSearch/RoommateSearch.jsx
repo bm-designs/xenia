@@ -9,15 +9,22 @@ class RoomateSearch extends React.Component {
 
 	}
 	this.ReactDOM = ReactDOM;
+	this.searchQuery = {}
 	this.update = this.update.bind(this)
 	this.search = this.search.bind(this)
-
 	}
 	search(){
-		
-	}
-	update(){
 
+	}
+	update(e){
+		var key = e.target.name
+		var value = e.target.value
+		if (key in this.searchQuery){
+			this.searchQuery[key]=''
+		} else {
+			this.searchQuery[key]=value
+		}
+		console.log(this.searchQuery)
 	}
 	componentDidMount(){
 		var roommates = [{
@@ -26,7 +33,9 @@ class RoomateSearch extends React.Component {
 			location:'San Francisco' ,
 			url:'/stanton', 
 			housing:true, 
-			bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.'
+			bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.',
+				contact: 'Email',
+				contactInfo:'stantheman@bunkd.com'
 			},
 			{
 				name:"Ricky", 
@@ -34,7 +43,9 @@ class RoomateSearch extends React.Component {
 				housing:false, 
 				location: 'Los Angeles', 
 				url:'/ricky', 
-				bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.'
+				bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.',
+				contact: 'Mobile',
+				contactInfo:'(310)-555-0959'
 			},
 			{
 				name:"Dan", 
@@ -42,7 +53,9 @@ class RoomateSearch extends React.Component {
 				url:'/dan', 
 				housing:true, 
 				location: 'Mountain View', 
-				bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.'
+				bio:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum accumsan nisi ut nibh varius porta. Nulla volutpat diam eget sapien pulvinar, at fringilla erat blandit. Proin efficitur quam a euismod gravida. Mauris consectetur sollicitudin ligula, in consectetur massa ornare vestibulum. Morbi ac molestie magna. Duis nec rutrum nulla. Nulla id tincidunt velit. Sed at gravida odio, vel scelerisque odio. Cras pretium eu elit sed varius. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur at blandit lectus.',
+				contact: 'Facebook',
+				contactInfo:'Dan Molina'
 			}]
 		this.ReactDOM.render(<SearchResults roommates={roommates}/>, document.getElementById('results'))
 
@@ -52,27 +65,28 @@ class RoomateSearch extends React.Component {
 			<div id='search-wrapper'>
 				<div id='search-container'>
 					<div id='filter-container'>
+					<h1>Roommate Preferences </h1>
 						<button id='filter-button'> ▼ </button><br/>
-						<label>Cleanliness of Roomate</label>
-						<input name='first-preference' type='range' min='1' max='5' onInput={this.update.bind(this)} />
+						<label>Cleanliness Level of Roommate</label>
+						<input type='number' min='1' max='5' onInput={this.update.bind(this)} />
 						<br/>
-						<label> Do you smoke? </label>
-						<select>
+						<label> Smoking </label>
+						<select onInput={this.update.bind(this)}>
 							<option>No</option>
 							<option>Tobacco/Hookah</option>
 							<option>Marijuana</option>
 							<option>Other</option>
 						</select>
 						<br/>
-						<label> What is your relationship status?</label>
-						<select>
+						<label> Relationship Status</label>
+						<select onInput={this.update.bind(this)}>
 							<option value='Relationship'> Relationship</option>
 							<option value='Single'> Single</option>
 							<option value="It's Complicated" >It's Complicated</option>
 						</select>
 						<br/>
-						<label>My future roommate has as</label>
-						<select>
+						<label>Pets</label>
+						<select onInput={this.update.bind(this)}>
 							<option>Dogs</option>
 							<option>Cats</option>
 							<option>Reptiles</option>
@@ -80,30 +94,30 @@ class RoomateSearch extends React.Component {
 							<option> Rodent </option>
 						</select>	
 						<br/>
-						<label>My future roomate  </label>
-						<select>
+						<label>Sleeping Habits</label>
+						<select onInput={this.update.bind(this)}>
 							<option value='yes'> snores</option>
 							<option value='no'> does not snore</option>
 						</select>
 						<br/>
-						<label> Are you okay with social gatherings at your house? </label>
-						<select>
+						<label> Social Gatherings </label>
+						<select onInput={this.update.bind(this)}>
 							<option name='gatherings' value='Occasionally (Breaks/Weekends)'>Occasionally</option>
 							<option name='gatherings' value='No'> No</option>
 							<option name='gatherings' value='Yes'> Yes</option>
 						</select>
 						<br/>
 						<label>What time do you usually go to bed? </label>
-						<input type='time'/>
+						<input type='time' onInput={this.update.bind(this)}/>
 						<br/>
-						<label>Alcohol Friendly?</label>
-						<select>
+						<label>Drinking Status</label>
+						<select onInput={this.update.bind(this)}>
 							<option name='drink' value='yes'> Yes </option>
 							<option name='drink' value='no'> No </option>
 						</select>
 						<br/>
-						<label>How often do you cook or use the kitchen?</label>
-						<select>
+						<label>Kitchen Usage</label>
+						<select onInput={this.update.bind(this)}>
 							<option name='kitchen' value='barely'> Barely </option>
 							<option name='kitchen' value='frequently'> Frequently </option>
 							<option name='kitchen' value='everyday'> Everyday </option>
